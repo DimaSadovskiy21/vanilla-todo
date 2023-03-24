@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1 class="header__title">TodoList</h1>
+      </header>
+      <main>
+        <form class="todo__form">
+            <input type="text" class="todo__input" placeholder="add new task)"/>
+            <button class="todo__button_submit" type="submit">
+              add
+            </button>
+            <div class="todo__filter_block">
+                <button id="all" class="todo__button_filter">all</button>
+                <button id="active" class="todo__button_filter">active</button>
+                <button id="completed" class="todo__button_filter">completed</button>
+            </div>
+          </form>
+          <div class="todo__list">            
+            <ul class="todo__list_items">
+            </ul>
+          </div>
+      </main>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>
