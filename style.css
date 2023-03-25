@@ -35,7 +35,7 @@ body {
 
 .todo__form {
     grid-template-areas: 'input input submit'
-                        'filter filter filter';
+        'filter filter filter';
 }
 
 .todo__input {
@@ -48,7 +48,7 @@ body {
     font-family: inherit;
     font-size: inherit;
     background-color: #e8e8e8;
-    color: rgb(207 146 120);   
+    color: rgb(207 146 120);
 }
 
 .todo__input::placeholder {
@@ -56,8 +56,16 @@ body {
     transition: color 0.5s;
 }
 
-.todo__input:hover::placeholder {
+.todo__input:hover::placeholder,
+.todo__input:focus::placeholder {
     color: #1d1e22;
+}
+
+.todo__form_error {
+    display: none;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 .todo__button_submit {
@@ -102,6 +110,11 @@ body {
 
 .todo__button_filter:hover {
     color: white;
+    background-color: rgb(182 206 168);
+}
+
+.todo__button_filter.active {
+    color: white;
     background-color: rgb(86 156 214);
 }
 
@@ -144,7 +157,8 @@ body {
     gap: 10px;
 }
 
-.item__button_complete, .item__button_delete {
+.item__button_complete,
+.item__button_delete {
     padding: 6px 12px;
     border: none;
     border-radius: 4px;
@@ -164,5 +178,6 @@ body {
 
 .item__button_delete:hover {
     color: white;
-    background-color: rgb(207 146 120);;
+    background-color: rgb(207 146 120);
+    ;
 }
